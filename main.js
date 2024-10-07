@@ -10,10 +10,6 @@ import { FitAddon } from "@xterm/addon-fit";
 let webcontainerInstance;
 
 window.addEventListener("load", async () => {
-  textareaEl.value = files["index.js"].file.contents;
-  textareaEl.addEventListener("input", (e) => {
-    writeIndexJS(e.currentTarget.value);
-  });
 
   const fitAddon = new FitAddon();
   const terminal = new Terminal({
@@ -26,7 +22,8 @@ window.addEventListener("load", async () => {
   // Call only once
   webcontainerInstance = await WebContainer.boot();
   await webcontainerInstance.mount(files);
-
+  await installDependencies();
+  await startDevServer();
   // Wait for `server-ready` event
   webcontainerInstance.on("server-ready", (port, url) => {
     iframeEl.src = url;
@@ -94,9 +91,6 @@ async function writeIndexJS(content) {
 
 document.querySelector("#app").innerHTML = `
   <div class="container">
-    <div class="editor">
-      <textarea>I am a textarea</textarea>
-    </div>
     <div class="preview">
       <iframe src="loading.html"></iframe>
     </div>
@@ -106,9 +100,6 @@ document.querySelector("#app").innerHTML = `
 
 /** @type {HTMLIFrameElement | null} */
 const iframeEl = document.querySelector("iframe");
-
-/** @type {HTMLTextAreaElement | null} */
-const textareaEl = document.querySelector("textarea");
 
 /** @type {HTMLTextAreaElement | null} */
 const terminalEl = document.querySelector(".terminal");
