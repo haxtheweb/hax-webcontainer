@@ -19,9 +19,40 @@
     padding: 0;
     overflow-y: hidden;
   }
+  #top {
+    width: 100%;
+    background-color: black;
+  }
+  ul {
+    margin: 0 auto;
+    display: table;
+    padding: 0;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: monospace;
+  }
+
+  ul li {
+    display: inline-flex;
+    list-style: none;
+    padding: 0;
+    margin: 8px;
+  }
+  ul li {
+    color: yellow;
+    padding: 4px;
+    background-color: #444444;
+  }
+  ul li a {
+    color: white;
+  }
+  a:hover, a:focus {
+    outline: yellow 2px solid;
+    background-color: black;
+  }
   
   iframe {
-    height: 90vh;
+    height: 84vh;
     width: 100%;
     border: none;
     background-color: transparent;
