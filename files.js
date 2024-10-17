@@ -14,10 +14,12 @@ export const files = {
           "type": "module",
           "dependencies": {
             "@haxtheweb/haxcms-nodejs": "latest",
-            "nodemon": "latest"
+            "@haxtheweb/create": "latest"
           },
           "scripts": {
-            "start": "haxcms-nodejs"
+            "start": "haxcms-nodejs",
+            "hax": "hax",
+            "haxcms-nodejs":  "haxcms-nodejs"
           }
         }`,
     },
