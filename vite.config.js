@@ -7,6 +7,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         nested: resolve(__dirname, 'loading.html'),
+        nested2: resolve(__dirname, 'docplayer.html'),
       },
     },
   },

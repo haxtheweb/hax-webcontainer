@@ -23,7 +23,7 @@
     width: 100%;
     background-color: black;
   }
-  ul {
+  #top ul {
     margin: 0 auto;
     display: table;
     padding: 0;
@@ -32,33 +32,33 @@
     font-family: monospace;
   }
 
-  ul li {
+  #top ul li {
     display: inline-flex;
     list-style: none;
     padding: 0;
     margin: 8px;
   }
-  ul li {
+  #top ul li {
     color: yellow;
     padding: 4px;
     background-color: #444444;
   }
-  ul li a {
+  #top ul li a {
     color: white;
   }
-  a:hover, a:focus {
+  #top a:hover, #top a:focus {
     outline: yellow 2px solid;
     background-color: black;
   }
   
-  iframe {
+  web-container::part(iframe) {
     height: 84vh;
     width: 100%;
     border: none;
     background-color: transparent;
   }
 
-  .terminal::before {
+  web-container::part(terminal)::before {
     display: inline-flex;
     height: 20px;
     padding: 8px;
@@ -72,7 +72,7 @@
     z-index: 100000;
     content: "Demo terminal";
   }
-  .terminal {
+  web-container::part(terminal) {
     height: 10vh;
     padding: 0;
     margin: 0;

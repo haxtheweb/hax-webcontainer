@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <base href="/">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="Description" content="Demonstration for web-container">
+
+  <style>
+    :root, html, body {
+      margin: 0;
+      padding: 0;
+    }
+    #demo {
+      margin: var(--ddd-spacing-2);
+    }
+    web-container {
+      margin: var(--ddd-spacing-2);
+      border: var(--ddd-border-md);
+      border-radius: var(--ddd-radius-lg);
+    }
+    web-container:hover {
+      box-shadow: var(--ddd-boxShadow-sm);
+    }
+    #example {
+      --web-container-font-size: var(--ddd-font-size-l);
+      background-color: var(--ddd-accent-2);
+      color: var(--ddd-primary-17);
+    }
+  </style>
+  <title>web-container</title>
+</head>
+
+<body>
+  <div id="top">
+    <ul>
+      <li><a href="index.html">&lt;h-a-x&gt; Demo</a></li>
+      <li><a href="docplayer.html" target="_blank">Element Doc player</a></li>
+      <li><a href="https://haxtheweb.org" target="_blank">Learn HAX</a></li>
+      <li><a href="https://github.com/haxtheweb/haxcms-nodejs" target="_blank">HAXcms (nodejs)</a></li>
+      <li><a href="https://github.com/haxtheweb/haxcms-php" target="_blank">HAXcms (php)</a></li>
+      <li><a href="https://github.com/haxtheweb/create" target="_blank">npm init @haxtheweb</a></li>
+      <li><a href="https://github.com/haxtheweb/desktop" target="_blank">HAX Desktop</a></li>
+    </ul>
+  </div>
+  <div id="demo">
+    <h1>web-container</h1>
+    <select id="select">
+      <option></option>
+    </select>
+    <p>Select the project to produce a demo for. This will make a best attempt</p>
+    <div id="container"></div>
+  </div>
+  <script type="module" src="./docplayer.js"></script>
+</body>
+</html>
