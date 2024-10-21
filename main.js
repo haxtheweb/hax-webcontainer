@@ -1,6 +1,7 @@
 import "./style.css";
 import "@haxtheweb/web-container";
 let wc = document.createElement('web-container');
+wc.hideEditor = true;
 wc.files = {
 'package.json': {
   file: {
