@@ -1,63 +1,115 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <base href="/">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="Description" content="Demonstration for web-container">
-
-  <style>
-    :root, html, body {
-      margin: 0;
-      padding: 0;
-    }
-    #demo {
-      margin: var(--ddd-spacing-2);
-    }
-    web-container {
-      margin: var(--ddd-spacing-2);
-      border: var(--ddd-border-md);
-      border-radius: var(--ddd-radius-lg);
-    }
-    web-container:hover {
-      box-shadow: var(--ddd-boxShadow-sm);
-    }
-    #example {
-      --web-container-font-size: var(--ddd-font-size-l);
-      background-color: var(--ddd-accent-2);
-      color: var(--ddd-primary-17);
-    }
-  </style>
-  <title>web-container</title>
-</head>
-
-<body>
-  <div id="top">
-    <ul>
-      <li><a href="https://playground.hax.cloud/">play</a></li>
-      <li><a href="https://hax.cloud/">demo</a></li>
-      <li><a href="https://rpg-me.hax.cloud/">rpg</a></li>
-      <li><a href="https://haxtheweb.org" target="_blank">learn</a></li>
-      <li><a href="https://hax.cloud/docplayer.html" target="_blank">elements</a></li>
-      <li><a href="https://github.com/haxtheweb/create" target="_blank">cli</a></li>
-      <li><a href="https://github.com/haxtheweb/haxcms-nodejs" target="_blank">nodejs</a></li>
-      <li><a href="https://github.com/haxtheweb/haxcms-php" target="_blank">php</a></li>
-      <li><a href="https://github.com/haxtheweb/desktop" target="_blank">desktop</a></li>
-    </ul>
-  </div>
-  <div id="demo">
-    <h1>web-container</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="generator" content="HAXcms">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="assets/icon-48x48.png">
+    <meta name="theme-color" content="">
+    <meta name="robots" content="index, follow">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" sizes="48x48" href="assets/icon-48x48.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="96x96" href="assets/icon-96x96.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="assets/icon-192x192.png">
+    <meta name="msapplication-TileImage" content="assets/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="" />
+    <meta name="og:type" property="og:type" content="article" />
+    <meta name="og:description" property="og:description" content="" />
+    <meta name="og:image" property="og:image" content="" />
+    <meta name="twitter:card" property="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" property="twitter:description" content="" />
+    <meta name="twitter:image" property="twitter:image" content="" />
+    <meta rel="cc:license" href="https://creativecommons.org/licenses/by-sa/4.0/" content="License: Creative Commons: Attribution Share a like"/>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HAX is Ubiquitous Web Publishing</title>
+    <style>
+      body {
+      }
+      web-container {
+        min-height: 50vh;
+      }
+      web-container::part(iframe) {
+        height: 70vh;
+        width: 100%;
+        min-height: 50vh;
+        border: none;
+        background-color: transparent;
+      }
+    
+      web-container::part(terminal)::before {
+        display: inline-flex;
+        height: 20px;
+        padding: 8px;
+        position: fixed;
+        background-color: white;
+        color: black;
+        font-size: 16px;
+        font-weight: bold;
+        right: 0;
+        bottom: 0;
+        z-index: 100000;
+        content: "Demo terminal";
+      }
+      web-container::part(terminal) {
+        height: 10vh;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="top">
+      <img class="traveler" src="./assets/icon-96x96.png" alt="HAX Traveler logo" loading="eager"/>
+      <rpg-character height="32" width="24"></rpg-character>  
+      <ul>
+        <li><a href="https://playground.hax.cloud/">play</a></li>
+        <li><a href="https://hax.cloud/">demo</a></li>
+        <li><a href="https://rpg-me.hax.cloud/">rpg</a></li>
+        <li><a href="https://haxtheweb.org" target="_blank">learn</a></li>
+        <li><a href="https://hax.cloud/docplayer.html" target="_blank">elements</a></li>
+        <li><a href="https://github.com/haxtheweb/create" target="_blank">cli</a></li>
+        <li><a href="https://github.com/haxtheweb/haxcms-nodejs" target="_blank">nodejs</a></li>
+        <li><a href="https://github.com/haxtheweb/haxcms-php" target="_blank">php</a></li>
+        <li><a href="https://github.com/haxtheweb/desktop" target="_blank">desktop</a></li>
+        <li><a href="https://github.com/haxtheweb" target="_blank">github</a></li>
+      </ul>
+    </div>
     <div id="app"></div>
-  <script type="module" src="./docplayer.js"></script>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XC5S35Q0F4"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <footer>
+      <div>
+        <rpg-character height="48" width="32"></rpg-character>
+        <rpg-character height="48" width="32"></rpg-character>
+        <rpg-character height="48" width="32"></rpg-character>
+        <rpg-character height="48" width="32"></rpg-character>
+        <rpg-character height="48" width="32"></rpg-character>
+        <rpg-character height="48" width="32"></rpg-character>
+        <rpg-character height="48" width="32"></rpg-character>
+        <rpg-character height="48" width="32"></rpg-character>
+        <rpg-character height="48" width="32"></rpg-character>
+        <rpg-character height="48" width="32"></rpg-character>
+        <rpg-character height="48" width="32" walking></rpg-character>
+      </div>
+      <div><img class="traveler" src="./assets/icon-96x96.png" alt="HAX Traveler logo" loading="eager"/>
+        HAXTheWeb <strong>|</strong> The Pennsylvania State University © 2019</div>
+      <img class="psu-logo" src="./assets/images/Penn-State-Mark.png" alt="Pennsylvania State University logo" loading="lazy" fetchpriority="low" />
+    </footer>
+    <script type="module" src="./docplayer.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XC5S35Q0F4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-    gtag('config', 'G-XC5S35Q0F4');
-  </script>
-</body>
+      gtag('config', 'G-XC5S35Q0F4');
+    </script>
+  </body>
 </html>

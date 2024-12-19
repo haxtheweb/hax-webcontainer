@@ -29,9 +29,42 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HAX is Ubiquitous Web Publishing</title>
+    <style>
+      body {
+      }
+      web-container::part(iframe) {
+        height: 70vh;
+        width: 100%;
+        border: none;
+        background-color: transparent;
+      }
+    
+      web-container::part(terminal)::before {
+        display: inline-flex;
+        height: 20px;
+        padding: 8px;
+        position: fixed;
+        background-color: white;
+        color: black;
+        font-size: 16px;
+        font-weight: bold;
+        right: 0;
+        bottom: 0;
+        z-index: 100000;
+        content: "Demo terminal";
+      }
+      web-container::part(terminal) {
+        height: 10vh;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+      }
+    </style>
   </head>
   <body>
     <div id="top">
+      <img class="traveler" src="./assets/icon-96x96.png" alt="HAX Traveler logo" loading="eager"/>
+      <rpg-character height="32" width="24"></rpg-character>  
       <ul>
         <li><a href="https://playground.hax.cloud/">play</a></li>
         <li><a href="https://hax.cloud/">demo</a></li>
@@ -42,9 +75,28 @@
         <li><a href="https://github.com/haxtheweb/haxcms-nodejs" target="_blank">nodejs</a></li>
         <li><a href="https://github.com/haxtheweb/haxcms-php" target="_blank">php</a></li>
         <li><a href="https://github.com/haxtheweb/desktop" target="_blank">desktop</a></li>
+        <li><a href="https://github.com/haxtheweb" target="_blank">github</a></li>
       </ul>
     </div>
     <div id="app"></div>
+    <footer>
+      <div>
+        <rpg-character height="48" width="32"></rpg-character>
+        <rpg-character height="48" width="32"></rpg-character>
+        <rpg-character height="48" width="32"></rpg-character>
+        <rpg-character height="48" width="32"></rpg-character>
+        <rpg-character height="48" width="32"></rpg-character>
+        <rpg-character height="48" width="32"></rpg-character>
+        <rpg-character height="48" width="32"></rpg-character>
+        <rpg-character height="48" width="32"></rpg-character>
+        <rpg-character height="48" width="32"></rpg-character>
+        <rpg-character height="48" width="32"></rpg-character>
+        <rpg-character height="48" width="32" walking></rpg-character>
+      </div>
+      <div><img class="traveler" src="./assets/icon-96x96.png" alt="HAX Traveler logo" loading="eager"/>
+        HAXTheWeb <strong>|</strong> The Pennsylvania State University © 2019</div>
+      <img class="psu-logo" src="./assets/images/Penn-State-Mark.png" alt="Pennsylvania State University logo" loading="lazy" fetchpriority="low" />
+    </footer>
     <script type="module" src="./main.js"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XC5S35Q0F4"></script>

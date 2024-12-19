@@ -1,80 +1,194 @@
+:root,
+html,
+html body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--ddd-font-secondary), "Roboto Slab", serif;
+  font-size: var(--ddd-theme-body-font-size, 20px);
+  font-weight: var(--ddd-font-weight-regular, 400);
+  letter-spacing: normal;
+}
+body {
+  padding: 0 var(--ddd-spacing-8, 32px);
+}
+h1 {
+  font-size: var(--ddd-theme-h1-font-size, 40px);
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ddd-font-primary), "Roboto", "Franklin Gothic Medium", Tahoma, sans-serif;
+  font-weight: var(--ddd-font-weight-bold, 700);
+  line-height: auto;
+  letter-spacing: auto;
+}
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
+  margin-top: 0;
+}
+p {
+  margin: var(--ddd-spacing-6, 24px) 0;
+}
+code {
+  transition: all 0.3s ease 0s;
+  display: inline-block;
+  padding: 2px var(--ddd-spacing-1, 4px);
+  margin: 0 var(--ddd-spacing-1, 4px);
+  font-size: calc(var(--ddd-theme-body-font-size, 20px) - var(--ddd-spacing-1, 4px));
+  background-color: var(--ddd-theme-code-background-color, light-dark(var(--ddd-theme-default-limestoneLight, #e4e5e7), black));
+  color: var(--ddd-theme-code-color, light-dark(black, var(--ddd-theme-default-limestoneLight, #e4e5e7)));
+  line-height: 1;
+  border-radius: var(--ddd-radius-xs, 4px);
+  border: var(--ddd-border-md, 3px solid var(--ddd-theme-default-limestoneLight, #e4e5e7));
+  border-style: groove;
+  border-color: light-dark(var(--ddd-theme-default-limestoneMaxLight, #f2f2f4), black);
+  font-family: monospace;
+  letter-spacing: var(--ddd-ls-16-lg, 0.24px);
+  pointer-events: auto;
+  user-select: all;
+}
+code:hover {
+  font-weight: bold;
+}
+
+header,
+main {
+  padding: 0 16px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.container {
+  padding: 0 16px;
+  max-width: 80vw;
+  margin: 0 auto;
+  min-height: 500px;
+}
+footer {
+  vertical-align: middle;
+  margin: 0;
+  padding: 16px;
+  text-align: center;
+  font-family: var(--ddd-font-navigation), "Roboto Condensed", sans-serif;
+  background-color: var(--ddd-primary-2);
+  color: var(--ddd-accent-1);
+  border: none;
+}
+rpg-character {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+.psu-logo {
+  display:block;
+  height: 42px;
+  margin: var(--ddd-spacing-2) auto;
+  padding: var(--ddd-spacing-2);
+}
+.attention {
+  border: var(--ddd-border-md, 2px solid black);
+  border-color: var(--ddd-primary-1);
+  display: inline-block;
+  padding: var(--ddd-spacing-2);
+}
+.command {
+  display: inline-block;
+  vertical-align: bottom;
+}
+.command a {
+  border: var(--ddd-border-md, 2px solid black);
+  padding: var(--ddd-spacing-2);
+  display: inline-block;
+}
+.command a.active,
+.command:focus-within,
+.command a:hover,
+.command a:focus {
+  border-color: var(--ddd-primary-1);
+}
+header h1 {
+  margin: 0;
+  font-family:monospace;
+}
+header h1 strong {
+  font-weight: var(--ddd-font-black);
+  font-family: var(--ddd-font-navigation);
+  margin-right: var(--ddd-spacing-1);
+}
+blink {
+  animation: blink 1s infinite alternate;
+  color: var(--ddd-primary-15, orange);
+  font-size: var(--ddd-font-size-s);
+  vertical-align: middle;
+  margin-left: var(--ddd-spacing-2);
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  54% { opacity: 1; }
+  55% { opacity: 0; }
+  100% { opacity: 0; }
+}
 * {
-    box-sizing: border-box;
-  }
-  
-  :root {
-    font-family:
-      Inter,
-      system-ui,
-      Segoe UI,
-      Roboto,
-      Helvetica Neue,
-      sans-serif;
-    color: black;
-    background: white;
-  }
-  
-  body {
+  box-sizing: border-box
+}
+
+:root {
+    color: #000;
+    background: white
+}
+
+body {
     margin: 0;
     padding: 0;
-    overflow-y: hidden;
-  }
-  #top {
+}
+
+#top {
     width: 100%;
-    background-color: black;
-  }
-  #top ul {
-    margin: 0 auto;
-    display: table;
-    padding: 0;
-    font-size: 20px;
-    font-weight: bold;
-    font-family: monospace;
+    font-family: var(--ddd-font-navigation), "Roboto Condensed", sans-serif;
+    background-color: var(--ddd-primary-2);
+    color: var(--ddd-accent-1);
   }
 
-  #top ul li {
+.traveler {
+  height: 32px;
+}
+footer .traveler {
+  margin-right: -4px;
+  margin-bottom: -10px;
+}
+#top .traveler {
+  float: left;
+}
+#top rpg-character {
+  float: right;
+}
+
+#top ul {
+    margin: 0 auto 16px;
+    display: table;
+    padding: 0;
+    font-size: var(--ddd-font-size-3xs, 20px);
+    font-weight: var(--ddd-font-weight-bold, 700);
+}
+
+#top ul li {
     display: inline-flex;
     list-style: none;
     padding: 0;
-    margin: 8px;
-  }
-  #top ul li {
-    color: yellow;
-    padding: 4px;
-    background-color: #444444;
-  }
-  #top ul li a {
-    color: white;
-  }
-  #top a:hover, #top a:focus {
-    outline: yellow 2px solid;
-    background-color: black;
-  }
-  
-  web-container::part(iframe) {
-    height: 84vh;
-    width: 100%;
-    border: none;
-    background-color: transparent;
-  }
+    margin: 0 8px
+}
 
-  web-container::part(terminal)::before {
-    display: inline-flex;
-    height: 20px;
-    padding: 8px;
-    position: fixed;
-    background-color: white;
-    color: black;
-    font-size: 16px;
-    font-weight: bold;
-    right: 0;
-    bottom: 0;
-    z-index: 100000;
-    content: "Demo terminal";
-  }
-  web-container::part(terminal) {
-    height: 10vh;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-  }
+#top ul li {
+  color: var(--ddd-accent-1);
+  background-color: var(--ddd-theme-default-coalyGray, #333333);
+}
+
+#top ul li a {
+    color: #fff;
+    padding: 4px 8px;
+    text-decoration: none;
+}
+
+#top a:hover,#top a:focus {
+    outline: var(--ddd-primary-15, orange) 2px solid;
+    outline-offset: -2px;
+    background-color: #000;
+}
