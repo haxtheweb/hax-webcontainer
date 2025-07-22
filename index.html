@@ -38,26 +38,13 @@
         border: none;
         background-color: transparent;
       }
-    
-      web-container::part(terminal)::before {
-        display: inline-flex;
-        height: 20px;
-        padding: 8px;
-        position: fixed;
-        background-color: white;
-        color: black;
-        font-size: 16px;
-        font-weight: bold;
-        right: 0;
-        bottom: 0;
-        z-index: 100000;
-        content: "Demo terminal";
-      }
       web-container::part(terminal) {
-        height: 10vh;
+        height: 20vh;
         padding: 0;
         margin: 0;
         overflow: hidden;
+        min-height: 10vh;
+        max-height: 40vh;
       }
     </style>
   </head>
@@ -66,8 +53,8 @@
       <img class="traveler" src="./assets/icon-96x96.png" alt="HAX Traveler logo" loading="eager"/>
       <rpg-character height="32" width="24"></rpg-character>  
       <ul>
-        <li><a href="https://playground.hax.cloud/">play</a></li>
-        <li><a href="https://hax.cloud/">demo</a></li>
+        <li><a href="https://playground.hax.cloud/">playground</a></li>
+        <li><a href="https://hax.cloud/">full haxcms demo</a></li>
         <li><a href="https://rpg-me.hax.cloud/">rpg</a></li>
         <li><a href="https://haxtheweb.org" target="_blank">learn</a></li>
         <li><a href="https://hax.cloud/docplayer.html" target="_blank">elements</a></li>
