@@ -8,6 +8,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         nested: resolve(__dirname, 'loading.html'),
         nested2: resolve(__dirname, 'docplayer.html'),
+        nested3: resolve(__dirname, 'magicscript.html'),
       },
     },
   },
