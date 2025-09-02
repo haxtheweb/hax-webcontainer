@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="generator" content="HAXcms">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="assets/icon-48x48.png">
+    <meta name="theme-color" content="">
+    <meta name="robots" content="index, follow">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" sizes="48x48" href="assets/icon-48x48.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="96x96" href="assets/icon-96x96.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="assets/icon-192x192.png">
+    <meta name="msapplication-TileImage" content="assets/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="" />
+    <meta name="og:type" property="og:type" content="article" />
+    <meta name="og:description" property="og:description" content="" />
+    <meta name="og:image" property="og:image" content="" />
+    <meta name="twitter:card" property="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" property="twitter:description" content="" />
+    <meta name="twitter:image" property="twitter:image" content="" />
+    <meta rel="cc:license" href="https://creativecommons.org/licenses/by-sa/4.0/" content="License: Creative Commons: Attribution Share a like"/>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HAX Magic Script CDN</title>
+    
+    <!-- THE MAGIC SCRIPT - This is all you need! -->
+    <script>window.__appCDN="https://cdn.hax.cloud/cdn/";</script>
+    <script src="./build.js"></script>
+    
+    <style>
+        /* Using DDD Design System Variables */
+        :root {
+            font-family: var(--ddd-font-primary, "Roboto", sans-serif);
+            color-scheme: light dark;
+            background-color: light-dark(white, black) !important;
+        }
+        
+        body {
+            font-family: var(--ddd-font-primary);
+            font-size: var(--ddd-font-size-s);
+            line-height: var(--ddd-lh-150);
+            margin: 0;
+            padding: var(--ddd-spacing-5);
+            background: light-dark(
+                var(--ddd-theme-default-limestoneMaxLight),
+                var(--ddd-theme-default-coalyGray)
+            );
+            color: light-dark(
+                var(--ddd-theme-default-coalyGray),
+                var(--ddd-theme-default-limestoneMaxLight)
+            );
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--ddd-spacing-5);
+        }
+        
+        .demo-section {
+            background: light-dark(
+                var(--ddd-theme-default-white),
+                var(--ddd-theme-default-potentialMidnight)
+            );
+            margin: var(--ddd-spacing-5) 0;
+            padding: var(--ddd-spacing-6);
+            border-radius: var(--ddd-radius-md);
+            box-shadow: var(--ddd-boxShadow-sm);
+            border: light-dark(
+                1px solid var(--ddd-theme-default-limestoneLight),
+                1px solid var(--ddd-theme-default-slateGray)
+            );
+        }
+        
+        h1 {
+            color: light-dark(
+                var(--ddd-theme-default-beaverBlue),
+                var(--ddd-theme-default-pughBlue)
+            );
+            font-size: var(--ddd-font-size-xl);
+            font-weight: var(--ddd-font-weight-bold);
+            text-align: center;
+            margin-bottom: var(--ddd-spacing-2);
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: light-dark(
+                var(--ddd-theme-default-slateGray),
+                var(--ddd-theme-default-limestoneLight)
+            );
+            font-size: var(--ddd-font-size-m);
+            margin-bottom: var(--ddd-spacing-8);
+        }
+        
+        h2 {
+            color: light-dark(
+                var(--ddd-theme-default-beaverBlue),
+                var(--ddd-theme-default-pughBlue)
+            );
+            font-size: var(--ddd-font-size-l);
+            font-weight: var(--ddd-font-weight-medium);
+            border-bottom: var(--ddd-border-sm);
+            border-bottom-color: light-dark(
+                var(--ddd-theme-default-beaverBlue),
+                var(--ddd-theme-default-pughBlue)
+            );
+            padding-bottom: var(--ddd-spacing-1);
+            margin-bottom: var(--ddd-spacing-4);
+        }
+        
+        .component-demo {
+            margin: var(--ddd-spacing-6) 0;
+            padding: var(--ddd-spacing-5);
+            border-left: var(--ddd-border-lg);
+            border-left-color: light-dark(
+                var(--ddd-theme-default-beaverBlue),
+                var(--ddd-theme-default-pughBlue)
+            );
+            background: light-dark(
+                var(--ddd-theme-default-limestoneMaxLight),
+                var(--ddd-theme-default-navy80)
+            );
+            border-radius: 0 var(--ddd-radius-sm) var(--ddd-radius-sm) 0;
+        }
+        
+        .magic-script-container {
+            position: relative;
+            margin: var(--ddd-spacing-5) 0;
+        }
+        
+        .magic-script-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: light-dark(
+                var(--ddd-theme-default-beaverBlue),
+                var(--ddd-theme-default-nittanyNavy)
+            );
+            color: var(--ddd-theme-default-white);
+            padding: var(--ddd-spacing-3) var(--ddd-spacing-5);
+            border-radius: var(--ddd-radius-sm) var(--ddd-radius-sm) 0 0;
+            font-weight: var(--ddd-font-weight-medium);
+            font-size: var(--ddd-font-size-xs);
+        }
+        
+        .magic-script-header .title {
+            display: flex;
+            align-items: center;
+            gap: var(--ddd-spacing-2);
+        }
+        
+        .copy-button {
+            border: none;
+            padding: var(--ddd-spacing-1) var(--ddd-spacing-3);
+            border-radius: var(--ddd-radius-xs);
+            cursor: pointer;
+            font-size: var(--ddd-font-size-4xs);
+            font-weight: var(--ddd-font-weight-medium);
+            transition: background 0.2s ease;
+        }
+        
+        .copy-button:hover {
+            background: light-dark(
+                var(--ddd-theme-default-creekLight),
+                var(--ddd-theme-default-skyBlue)
+            );
+            color: light-dark(
+                var(--ddd-theme-default-coalyGray),
+                var(--ddd-theme-default-white)
+            );
+        }
+        
+        .copy-button.copied {
+            background: var(--ddd-theme-default-opportunityGreen);
+        }
+
+        .magic-script {
+            display: grid;
+        }
+        
+        .magic-script pre {
+            background: light-dark(
+                var(--ddd-theme-default-potentialMidnight),
+                var(--ddd-theme-default-coalyGray)
+            );
+            color: light-dark(
+                var(--ddd-theme-default-slateMaxLight),
+                var(--ddd-theme-default-limestoneMaxLight)
+            );
+            padding: var(--ddd-spacing-5);
+            margin: 0;
+            border-radius: 0 0 var(--ddd-radius-sm) var(--ddd-radius-sm);
+            font-family: var(--ddd-font-navigation);
+            font-size: var(--ddd-font-size-xs);
+            line-height: var(--ddd-lh-150);
+            overflow-x: auto;
+            user-select: all;
+            -webkit-user-select: all;
+            -moz-user-select: all;
+            -ms-user-select: all;
+        }
+        
+        .magic-script code {
+            color: light-dark(
+                var(--ddd-theme-default-slateMaxLight),
+                var(--ddd-theme-default-limestoneMaxLight)
+            );
+            background: none;
+            padding: 0;
+        }
+        
+        .registry-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--ddd-spacing-2);
+            background: var(--ddd-theme-default-skyBlue);
+            color: light-dark(var(--ddd-theme-default-white), var(--ddd-theme-default-potentialMidnight));
+            text-decoration: none;
+            padding: var(--ddd-spacing-2) var(--ddd-spacing-4);
+            border-radius: var(--ddd-radius-sm);
+            font-weight: var(--ddd-font-weight-medium);
+            transition: background 0.2s ease;
+            margin: var(--ddd-spacing-2) 0;
+        }
+        
+        .registry-link:hover {
+            background: light-dark(
+                var(--ddd-theme-default-nittanyNavy),
+                var(--ddd-theme-default-beaverBlue)
+            );
+            color: var(--ddd-theme-default-white);
+            text-decoration: none;
+        }
+        
+        .component-demo h3 {
+            margin-top: 0;
+            color: light-dark(
+                var(--ddd-theme-default-potentialMidnight),
+                var(--ddd-theme-default-limestoneMaxLight)
+            );
+            font-size: var(--ddd-font-size-m);
+            font-weight: var(--ddd-font-weight-medium);
+        }
+        
+        .tag-example {
+            background: light-dark(
+                var(--ddd-theme-default-slateMaxLight),
+                var(--ddd-theme-default-slateGray)
+            );
+            color: light-dark(
+                var(--ddd-theme-default-coalyGray),
+                var(--ddd-theme-default-limestoneMaxLight)
+            );
+            padding: var(--ddd-spacing-2);
+            border-radius: var(--ddd-radius-xs);
+            font-family: var(--ddd-font-navigation);
+            margin: var(--ddd-spacing-2) 0;
+            border-left: var(--ddd-border-md);
+            border-left-color: light-dark(
+                var(--ddd-theme-default-beaverBlue),
+                var(--ddd-theme-default-pughBlue)
+            );
+            font-size: var(--ddd-font-size-4xs);
+            user-select: all;
+            -webkit-user-select: all;
+            -moz-user-select: all;
+            -ms-user-select: all;
+            cursor: pointer;
+        }
+        
+        .tag-example:hover {
+            background: light-dark(
+                var(--ddd-theme-default-limestoneLight),
+                var(--ddd-theme-default-slateLight)
+            );
+        }
+        
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--ddd-spacing-5);
+            margin: var(--ddd-spacing-5) 0;
+        }
+        
+        .benefit {
+            background: light-dark(
+                var(--ddd-theme-default-creekMaxLight),
+                var(--ddd-theme-default-navy80)
+            );
+            padding: var(--ddd-spacing-4);
+            border-radius: var(--ddd-radius-sm);
+            border-left: var(--ddd-border-lg);
+            border-left-color: light-dark(
+                var(--ddd-theme-default-creekTeal),
+                var(--ddd-theme-default-skyBlue)
+            );
+        }
+        
+        .benefit h4 {
+            margin-top: 0;
+            color: light-dark(
+                var(--ddd-theme-default-potentialMidnight),
+                var(--ddd-theme-default-limestoneMaxLight)
+            );
+            font-size: var(--ddd-font-size-s);
+            font-weight: var(--ddd-font-weight-medium);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--ddd-spacing-4);
+            margin: var(--ddd-spacing-5) 0;
+        }
+        
+        .stat-card {
+            background: light-dark(
+                linear-gradient(135deg, 
+                    var(--ddd-theme-default-skyBlue) 0%, 
+                    var(--ddd-theme-default-beaverBlue) 100%),
+                linear-gradient(135deg, 
+                    var(--ddd-theme-default-nittanyNavy) 0%, 
+                    var(--ddd-theme-default-potentialMidnight) 100%)
+            );
+            color: light-dark(
+                var(--ddd-theme-default-potentialMidnight),
+                var(--ddd-theme-default-limestoneMaxLight)
+            );
+            padding: var(--ddd-spacing-5);
+            border-radius: var(--ddd-radius-sm);
+            text-align: center;
+            box-shadow: var(--ddd-boxShadow-sm);
+            border: light-dark(
+                none,
+                1px solid var(--ddd-theme-default-slateGray)
+            );
+        }
+        
+        .stat-number {
+            font-size: var(--ddd-font-size-xxl);
+            font-weight: var(--ddd-font-weight-bold);
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: var(--ddd-font-size-xs);
+            opacity: 0.9;
+            margin-top: var(--ddd-spacing-1);
+        }
+        
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--ddd-spacing-5);
+            margin: var(--ddd-spacing-5) 0;
+        }
+        
+        .demo-button {
+            background: var(--ddd-theme-default-beaverBlue);
+            color: var(--ddd-theme-default-white);
+            border: none;
+            padding: var(--ddd-spacing-3) var(--ddd-spacing-6);
+            border-radius: var(--ddd-radius-sm);
+            cursor: pointer;
+            font-size: var(--ddd-font-size-s);
+            font-weight: var(--ddd-font-weight-medium);
+            transition: background 0.2s ease;
+        }
+        
+        .demo-button:hover {
+            background: light-dark(
+                var(--ddd-theme-default-nittanyNavy),
+                var(--ddd-theme-default-skyBlue)
+            );
+        }
+        
+        .notification {
+            position: fixed;
+            top: var(--ddd-spacing-5);
+            right: var(--ddd-spacing-5);
+            background: var(--ddd-theme-default-opportunityGreen);
+            color: var(--ddd-theme-default-white);
+            padding: var(--ddd-spacing-3) var(--ddd-spacing-5);
+            border-radius: var(--ddd-radius-sm);
+            z-index: 1000;
+            font-size: var(--ddd-font-size-xs);
+            box-shadow: var(--ddd-boxShadow-lg);
+            transform: translateX(400px);
+            transition: transform 0.3s ease;
+        }
+        
+        .notification.show {
+            transform: translateX(0);
+        }
+        
+        .notification.error {
+            background: var(--ddd-theme-default-original87Pink);
+        }
+        
+        .components-list {
+            columns: 3;
+            column-gap: var(--ddd-spacing-8);
+            line-height: var(--ddd-lh-150);
+        }
+        
+        .components-list > div {
+            break-inside: avoid;
+            padding: var(--ddd-spacing-1) 0;
+        }
+        
+        .highlight-text {
+            font-weight: var(--ddd-font-weight-bold);
+            color: light-dark(
+                var(--ddd-theme-default-beaverBlue),
+                var(--ddd-theme-default-pughBlue)
+            );
+        }
+        
+        /* Component spacing */
+        simple-colors, a11y-collapse, simple-icon, citation-element, 
+        progress-donut, simple-cta, accent-card {
+            margin: var(--ddd-spacing-4);
+        }
+        
+        simple-icon {
+            font-size: var(--ddd-icon-md);
+            margin: 0 var(--ddd-spacing-2);
+        }
+        
+        @media (max-width: 768px) {
+            .magic-script-header {
+                flex-direction: column;
+                gap: var(--ddd-spacing-2);
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .components-list {
+                columns: 2;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .components-list {
+                columns: 1;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body style="display:contents;">
+    <div id="top">
+      <img class="traveler" src="./assets/icon-96x96.png" alt="HAX Traveler logo" loading="eager"/>
+      <rpg-character height="32" width="24"></rpg-character>  
+      <ul>
+        <li><a href="https://playground.hax.cloud/">playground</a></li>
+        <li><a href="https://hax.cloud/">haxcms demo</a></li>
+        <li><a href="https://rpg-me.hax.cloud/">rpg me</a></li>
+        <li><a href="https://haxtheweb.org" target="_blank">docs</a></li>
+        <li><a href="https://hax.cloud/magicscript.html" target="_blank">magic</a></li>
+        <li><a href="https://hax.cloud/docplayer.html" target="_blank">elements</a></li>
+        <li><a href="https://github.com/haxtheweb/create" target="_blank">cli</a></li>
+        <li><a href="https://github.com/haxtheweb/haxcms-nodejs" target="_blank">nodejs</a></li>
+        <li><a href="https://github.com/haxtheweb/haxcms-php" target="_blank">php</a></li>
+        <li><a href="https://github.com/haxtheweb/desktop" target="_blank">desktop</a></li>
+        <li><a href="https://github.com/haxtheweb" target="_blank">github</a></li>
+      </ul>
+    </div>
+    <d-d-d></d-d-d>
+    <div id="app">
+        <h1>🧙‍♂️ Magic Script Demo</h1>
+        <p class="subtitle">Automatic Web Component Loading with HAX CDN</p>
+
+        <div class="demo-section">
+            <h2>🚀 What is the Magic Script?</h2>
+            <p>The Magic Script is a simple two-line solution that automatically loads web components from the HAX CDN when they're detected in the DOM. No manual imports, no complex setup - just include the script and use any component!</p>
+            
+            <div class="magic-script-container">
+                <div class="magic-script-header">
+                    <div class="title">
+                        <span>✨</span>
+                        <span>Magic Script - Copy & Paste Ready</span>
+                    </div>
+                    <button class="copy-button" onclick="copyMagicScript(this)">
+                        📋 Copy Code
+                    </button>
+                </div>
+                <div class="magic-script">
+                    <pre><code>&lt;script&gt;window.__appCDN="https://cdn.hax.cloud/cdn/";&lt;/script&gt;
+    &lt;script src="https://cdn.hax.cloud/cdn/build.js"&gt;&lt;/script&gt;</code></pre>
+                </div>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">500+</span>
+                    <div class="stat-label">Web Components</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">2</span>
+                    <div class="stat-label">Lines of Code</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">0</span>
+                    <div class="stat-label">Configuration Required</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">∞</span>
+                    <div class="stat-label">Possibilities</div>
+                </div>
+            </div>
+            
+            <p style="text-align: center; margin-top: var(--ddd-spacing-6);">
+                <a href="https://cdn.hax.cloud/cdn/wc-registry.json" target="_blank" class="registry-link">
+                    <span>📋</span>
+                    <span>View Complete Component Registry</span>
+                    <span>↗</span>
+                </a>
+            </p>
+            <p style="text-align: center; color: light-dark(var(--ddd-theme-default-slateGray), var(--ddd-theme-default-limestoneLight)); font-size: var(--ddd-font-size-xs);">
+                Click above to see all available components in the registry JSON file
+            </p>
+        </div>
+
+        <div class="demo-section">
+            <h2>🎯 How It Works</h2>
+            <ol style="line-height: var(--ddd-lh-150); padding-left: var(--ddd-spacing-5);">
+                <li><strong>Detection:</strong> The build.js script uses a MutationObserver to watch for undefined custom elements</li>
+                <li><strong>Registry Lookup:</strong> When a custom element is found, it checks the wc-registry.json for the component path</li>
+                <li><strong>Dynamic Import:</strong> The component is automatically imported from the CDN</li>
+                <li><strong>Hydration:</strong> The custom element is defined and the component becomes interactive</li>
+            </ol>
+        </div>
+        <div class="demo-section">
+            <h2>📚 Read more on dev.to</h2>
+            <a href="https://dev.to/btopro/uwc-part-3-the-magic-script-122a" target="_blank">Read the Dev.to article series about HAX Magic Script</a>
+        </div>
+    </div>
+    <footer>
+      <div>
+        <rpg-character height="48" width="32"></rpg-character>
+        <rpg-character height="48" width="32"></rpg-character>
+        <rpg-character height="48" width="32"></rpg-character>
+        <rpg-character height="48" width="32"></rpg-character>
+        <rpg-character height="48" width="32"></rpg-character>
+        <rpg-character height="48" width="32"></rpg-character>
+        <rpg-character height="48" width="32"></rpg-character>
+        <rpg-character height="48" width="32"></rpg-character>
+        <rpg-character height="48" width="32"></rpg-character>
+        <rpg-character height="48" width="32"></rpg-character>
+        <rpg-character height="48" width="32" walking></rpg-character>
+      </div>
+      <div><img class="traveler" src="./assets/icon-96x96.png" alt="HAX Traveler logo" loading="eager"/>
+        HAXTheWeb <strong>|</strong> The Pennsylvania State University © 2019</div>
+      <img class="psu-logo" src="./assets/images/Penn-State-Mark.png" alt="Pennsylvania State University logo" loading="lazy" fetchpriority="low" />
+    </footer>
+    <script>
+        // Function to copy the magic script to clipboard
+        async function copyMagicScript(button) {
+            const magicScriptText = `<script>window.__appCDN="https://cdn.hax.cloud/cdn/";<\/script>
+<script src="https://cdn.hax.cloud/cdn/build.js"><\/script>`;
+            
+            try {
+                await navigator.clipboard.writeText(magicScriptText);
+                
+                // Update button state
+                const originalText = button.innerHTML;
+                button.innerHTML = '✅ Copied!';
+                button.classList.add('copied');
+                
+                // Show notification
+                showNotification('Magic Script copied to clipboard! 🪄');
+                
+                // Reset button after 2 seconds
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.classList.remove('copied');
+                }, 2000);
+                
+            } catch (err) {
+                console.error('Failed to copy text: ', err);
+                showNotification('Failed to copy. Try selecting the code manually.', 'error');
+            }
+        }
+        
+        // Function to show notifications
+        function showNotification(message, type = 'success') {
+            const notification = document.createElement('div');
+            notification.className = `notification ${type === 'error' ? 'error' : ''}`;
+            notification.textContent = message;
+            
+            document.body.appendChild(notification);
+            
+            // Trigger animation
+            setTimeout(() => notification.classList.add('show'), 10);
+            
+            // Remove after 4 seconds
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => notification.remove(), 300);
+            }, 4000);
+        }
+
+        // Log when components are loaded (for demo purposes)
+        const originalLog = console.log;
+        console.log = function(...args) {
+            if (args[0] && args[0].includes && args[0].includes('✅')) {
+                showNotification(args[0]);
+            }
+            return originalLog.apply(console, args);
+        };
+        
+        // Add click handlers to code examples for easy selection
+        document.querySelectorAll('.tag-example').forEach(el => {
+            el.addEventListener('click', () => {
+                const selection = globalThis.getSelection();
+                const range = document.createRange();
+                range.selectNodeContents(el);
+                selection.removeAllRanges();
+                selection.addRange(range);
+            });
+        });
+    </script>
+</body>
+</html>
