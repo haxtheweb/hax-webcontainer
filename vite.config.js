@@ -10,7 +10,6 @@ const customHeadersPlugin = () => ({
         res.setHeader('Cross-Origin-Embedder-Policy', 'require-corp');
         res.setHeader('Cross-Origin-Opener-Policy', 'same-origin');
       }
-      console.log(req.url);
       // Continue to the next middleware
       next();
     });
