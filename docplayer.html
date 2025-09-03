@@ -30,6 +30,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HAX is Ubiquitous Web Publishing</title>
     <style>
+      body {
+        background-color: light-dark(white, var(--ddd-theme-default-potentialMidnight));
+        color: light-dark(black, white);
+        min-height: 100vh;
+      }
+      #app {
+        min-height: 50vh;
+        padding: var(--ddd-spacing-10);
+      }
+      h1 {
+        padding: var(--ddd-spacing-10);
+      }
       web-container {
         min-height: 50vh;
       }
@@ -81,6 +93,7 @@
         <li><a href="https://github.com/haxtheweb" target="_blank">github</a></li>
       </ul>
     </div>
+    <h1>HAX Doc player</h1>
     <div id="app"></div>
     <footer>
       <div>
