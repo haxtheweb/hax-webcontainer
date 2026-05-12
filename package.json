@@ -10,13 +10,13 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^4.1.0"
+    "vite": "^8.0.12"
   },
   "dependencies": {
-    "@haxtheweb/web-container": "^10.0.0",
-    "@haxtheweb/rpg-character": "^10.0.0",
-    "@webcontainer/api": "^1.1.3",
-    "@xterm/xterm": "latest",
-    "@xterm/addon-fit": "latest"
+    "@haxtheweb/rpg-character": "25.0.0",
+    "@haxtheweb/web-container": "25.0.0",
+    "@webcontainer/api": "1.6.4",
+    "@xterm/addon-fit": "latest",
+    "@xterm/xterm": "latest"
   }
 }
